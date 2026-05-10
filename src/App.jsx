@@ -120,7 +120,7 @@ export default function App() {
         <section className="hero">
           <div className="badge">FREE Demo · 20 Fragen</div>
           <h1>LernLoop §34a</h1>
-          <p>Teste den Prüfungssimulator direkt im Browser. Keine EXE, kein Download, kein Risiko.</p>
+          <p>Teste den Prüfungssimulator .</p>
 
           <div className="heroActions">
             <button className="primary" onClick={startExam}>

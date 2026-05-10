@@ -1,0 +1,461 @@
+{
+  "name": "LernLoop §34a FREE Demo",
+  "version": "WEB-DEMO-1",
+  "description": "20 Demo-Fragen für die §34a Sachkundeprüfung.",
+  "passingPercent": 60,
+  "questions": [
+    {
+      "source": "Prüfung 6.pdf",
+      "source_question_number": 25,
+      "category": "Datenschutz bestellt hat",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Eigentum ist das Recht, über eine Sache zu herrschen, z.B. eine Sache zu benutzen oder zu verkaufen",
+        "Das Eigentum ist allein durch Vorschriften des privaten Rechts geschützt",
+        "Inhaber des Eigentumsrechts können natürliche oder juristische Personen sein"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": 2,
+      "question": "Welche Aussagen zum Eigentum sind gemäß BGB richtig?",
+      "correct": [
+        0,
+        2
+      ],
+      "type": "multiple_choice",
+      "number": 1,
+      "demo": true
+    },
+    {
+      "source": "Prüfung Nr 8.pdf",
+      "source_question_number": 61,
+      "category": "Umgang mit Menschen",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "1",
+        "1 und 2",
+        "1 und 3",
+        "4",
+        "2"
+      ],
+      "explanation": "Bei Kombinationsfragen müssen zuerst die Aussagen geprüft und anschließend die passende Kombination ausgewählt werden.",
+      "question": "Welche Aussage zur Körpersprache ist richtig? (Nur eine Antwort richtig)",
+      "correct": [
+        0
+      ],
+      "type": "combination",
+      "number": 2,
+      "statements": [
+        "A) Körpersprache kann zu Eskalation und Konﬂikten führen",
+        "B) Körpersprache unterliegt stets unserer bewussten Steuerung",
+        "C) Körpersprache hat einen geringen Einﬂuss auf die Kommunikation",
+        "D) Körpersprache wirkt immer positiv auf andere Menschen"
+      ],
+      "demo": true
+    },
+    {
+      "source": "Prüfung 7.pdf",
+      "source_question_number": 49,
+      "category": "Allgemein",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Sie setzt ihre Tätigkeit fort und trägt bei Dienstende unverzüglich die Feststellung im Dienstbuch ein",
+        "Sie muss ihre Beobachtung und die von ihr veranlassten Maßnahmen an die zuständige Stelle melden",
+        "Sie muss dafür sorgen, dass unverzüglich der Weg zum nächsten Notausgang ausgeschildert ist",
+        "Sie muss dafür sorgen, dass der Notausgang unverzüglich frei gemacht wird"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": 2,
+      "question": "Was muss eine Wachperson tun, wenn sie entdeckt, dass ein Notausgang durch einen Gegenstand verstellt ist?",
+      "correct": [
+        1,
+        3
+      ],
+      "type": "multiple_choice",
+      "number": 3,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 4.pdf",
+      "source_question_number": 23,
+      "category": "Allgemein",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Das Privatrecht regelt die Rechtsbeziehungen zwischen Bürger und Staat. Der Staat ist im Privatrecht den Bürgern übergeordnet",
+        "Das Privatrecht ist ein Teil der Rechtsordnung, der die Rechtsbeziehungen der Bürger untereinander regelt",
+        "Die allgemeinen Grundsätze des BGB enthalten Grundregeln für das Privatrecht, z. B. über den Besitz und das Eigentum an Sachen"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": 2,
+      "question": "Welche Aussagen zum Privatrecht sind richtig?",
+      "correct": [
+        1,
+        2
+      ],
+      "type": "multiple_choice",
+      "number": 4,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 7.pdf",
+      "source_question_number": 60,
+      "category": "Allgemein",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Sprechpausen",
+        "Körperhaltung",
+        "Bekleidung"
+      ],
+      "explanation": "Bei dieser Frage ist genau eine Antwort richtig.",
+      "correct_count_hint": 1,
+      "question": "Was gehört zur nonverbalen Kommunikation?",
+      "correct": [
+        1
+      ],
+      "type": "single_choice",
+      "number": 5,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 1 (1).pdf",
+      "source_question_number": 70,
+      "category": "Umgang mit Menschen",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "1 und 2",
+        "2 und 3"
+      ],
+      "explanation": "Bei Kombinationsfragen müssen zuerst die Aussagen geprüft und anschließend die passende Kombination ausgewählt werden.",
+      "correct_count_hint": 1,
+      "question": "Am Tatort können Sicherheitsmitarbeiter auf verschiedene Tätertypen treffen. Mit welchen Reaktionen sollten Sicherheitsmitarbeiter grundsätzlich rechnen?",
+      "correct": [
+        0
+      ],
+      "type": "combination",
+      "number": 6,
+      "statements": [
+        "Ersttäter reagieren beim Antreffen häufig beherrscht und kontrolliert",
+        "Wiederholungstäter reagieren oft routiniert und sicher",
+        "Wiederholungstäter reagieren meist erschrocken und unsicher"
+      ],
+      "demo": true
+    },
+    {
+      "source": "Prüfung 5.pdf",
+      "source_question_number": 77,
+      "category": "Straftat begeht D?",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Alarmauslösung bei Störungen und Sabotage",
+        "Identifizierung von Fahrzeugen",
+        "Identifizierung von Personen",
+        "Warenkontrollen"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": 2,
+      "question": "Welche Aufgaben erfüllen Zutrittskontrollsysteme?",
+      "correct": [
+        0,
+        2
+      ],
+      "type": "multiple_choice",
+      "number": 7,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 6.pdf",
+      "source_question_number": 56,
+      "category": "Strafgesetz verletzt und mit Strafe bedroht ist",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Stress kann die Wahrnehmung und dadurch die Reaktionsfähigkeit verändern",
+        "Um völlig stressfrei den Wachdienst verrichten zu können",
+        "Dis-Stress kann das Arbeitsklima stören"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": 2,
+      "question": "Sicherheitsmitarbeiter sind in besonderem Maße dem Stress ausgeliefert. Aus welchen Gründen sollte negativer Stress abgebaut werden?",
+      "correct": [
+        0,
+        2
+      ],
+      "type": "multiple_choice",
+      "number": 8,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 4.pdf",
+      "source_question_number": 69,
+      "category": "Straftat begeht K?",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Mit Kollegen harmlose Witze zur Aufmunterung austauschen",
+        "Einen Kollegen häufig schikanieren und ihn bei Vorgesetzten denunzieren",
+        "Einen Kollegen nicht bemerken und ihn deshalb nicht grüßen"
+      ],
+      "explanation": "Bei dieser Frage ist genau eine Antwort richtig.",
+      "correct_count_hint": 1,
+      "question": "Was sind Fehler im Umgang mit Menschen?",
+      "correct": [
+        1
+      ],
+      "type": "single_choice",
+      "number": 9,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 5.pdf",
+      "source_question_number": 46,
+      "category": "Straftat begeht D?",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Durch persönliche Kontrollen wie Telefonanrufe",
+        "Durch den Dienstplan oder Arbeitsvertrag",
+        "Durch automatische oder willensunabhängig arbeitende Signalgeber",
+        "Durch Aufzeichnung des Dienstverlaufs im Dienstbuch"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": 2,
+      "question": "Wie kann gemäß der DGUV Vorschrift 23, Wach- und Sicherungsdienste, das Wach- und Sicherungspersonal überwacht werden, wenn sich bei seiner Tätigkeit besondere Gefahren ergeben können?",
+      "correct": [
+        0,
+        2
+      ],
+      "type": "multiple_choice",
+      "number": 10,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 1 (1).pdf",
+      "source_question_number": 56,
+      "category": "Umgang mit Waffen",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "1 und 3",
+        "1 und 2"
+      ],
+      "explanation": "Bei Kombinationsfragen müssen zuerst die Aussagen geprüft und anschließend die passende Kombination ausgewählt werden.",
+      "correct_count_hint": 1,
+      "question": "Welche Voraussetzungen müssen erfüllt sein, damit eine Schusswaffe als „sicher entladen“ gilt?",
+      "correct": [
+        2
+      ],
+      "type": "combination",
+      "number": 11,
+      "statements": [
+        "Es befindet sich keine Patrone mehr im Lauf und im Magazin, das Patronenlager ist kontrolliert leer.",
+        "Die Waffe ist ausgezogen und gesichert im Holster.",
+        "Die Seriennummer der Waffe wurde dokumentiert.",
+        "Die Waffe wurde einmal abgefeuert."
+      ],
+      "demo": true
+    },
+    {
+      "source": "Prüfung 7.pdf",
+      "source_question_number": 63,
+      "category": "Allgemein",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "2 und 3",
+        "1",
+        "3",
+        "2",
+        "1 und 2"
+      ],
+      "explanation": "Bei Kombinationsfragen müssen zuerst die Aussagen geprüft und anschließend die passende Kombination ausgewählt werden.",
+      "correct_count_hint": 1,
+      "question": "Ein Kaufhausdetektiv hat einen zehnjährigen Jungen beim Diebstahl überrascht. Der Detektiv soll das Kind den Eltern übergeben. Wie sollte er sich dabei verhalten?",
+      "correct": [
+        3
+      ],
+      "type": "combination",
+      "number": 12,
+      "statements": [
+        "Er soll den Eltern Vorhalten, dass sie verantwortlich sind, wenn das Kind kriminell wird",
+        "Er sollte höflich und korrekt die Eltern informieren",
+        "Er sollte den Eltern einen Vortrag über Jugendkriminalität halten"
+      ],
+      "demo": true
+    },
+    {
+      "source": "Prüfung 5.pdf",
+      "source_question_number": 5,
+      "category": "Allgemein",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Das Prinzip der Über- und Unterordnung zwischen Staat und Bürger",
+        "Das Prinzip der Gleichordnung zwischen Bürger und Bürger",
+        "Das Prinzip der Gleichordnung zwischen Staat und Bürger",
+        "Das Prinzip der Über- und Unterordnung zwischen Bürger und Bürger"
+      ],
+      "explanation": "Bei dieser Frage ist genau eine Antwort richtig.",
+      "correct_count_hint": 1,
+      "question": "Was kennzeichnet das öffentliche Recht?",
+      "correct": [
+        0
+      ],
+      "type": "single_choice",
+      "number": 13,
+      "demo": true
+    },
+    {
+      "source": "Prüfung Nr 8.pdf",
+      "source_question_number": 28,
+      "category": "Datenschutz",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "A) Der Besitzdiener hat die rechtliche Verfügungsgewalt über eine Sache",
+        "B) Der Besitzdiener ist dem Besitz gegenüber weisungsgebunden",
+        "C) Der Besitzdiener übt die tatsächliche Gewalt für einen anderen aus",
+        "D) Der Besitzdiener hat kein Abhängigkeitsverhältnis zum Besitzer"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "question": "Was kennzeichnet den Besitzdiener? (mehrere Antworten richtig)",
+      "correct": [
+        1,
+        2
+      ],
+      "type": "multiple_choice",
+      "number": 14,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 6.pdf",
+      "source_question_number": 46,
+      "category": "Strafgesetz verletzt und mit Strafe bedroht ist",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Die Beachtung von Gebots- und Verbotszeichen",
+        "Das Tragen bequemer Lederschuhe bei allen Sicherungsaufgaben",
+        "Die jährliche Funktionskontrolle technischer Hilfsmittel, die im täglichen Dienst verwendet werden"
+      ],
+      "explanation": "Bei dieser Frage ist genau eine Antwort richtig.",
+      "correct_count_hint": 1,
+      "question": "Was sind Maßnahmen der persönlichen Eigensicherung?",
+      "correct": [
+        0
+      ],
+      "type": "single_choice",
+      "number": 15,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 4.pdf",
+      "source_question_number": 29,
+      "category": "Allgemein",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Eine Person erwirbt Besitz an einer Sache, wenn sie die tatsächliche Verfügungsgewalt über die Sache erlangt. Gleichzeitig muss sie den Willen erkennen lassen, dass sie den Besitz ausüben will. Dies trifft auch auf den Dieb zu",
+        "Eine Person verliert den Besitz an einer Sache, wenn sie die tatsächliche Sachherrschaft freiwillig oder unfreiwillig nicht mehr ausübt. Dies ist z. B. der Fall, wenn eine Person die Sache im Bus liegen lässt",
+        "Eine Person verliert den Besitz an einer Sache, wenn der Eigentümer dieser Sache wechselt. Dies ist z. B. der Fall, wenn die Wohnung verkauft wird"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": 2,
+      "question": "Welche Aussagen zum Erwerb oder Verlust des Besitzes sind gemäß BGB richtig?",
+      "correct": [
+        0,
+        1
+      ],
+      "type": "multiple_choice",
+      "number": 16,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 4.pdf",
+      "source_question_number": 77,
+      "category": "Straftat begeht K?",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "2 und 3",
+        "1 und 2"
+      ],
+      "explanation": "Bei Kombinationsfragen müssen zuerst die Aussagen geprüft und anschließend die passende Kombination ausgewählt werden.",
+      "correct_count_hint": 1,
+      "question": "Weiche Schlüssel gehören zu einer Generalhauptschließanlage?",
+      "correct": [
+        1
+      ],
+      "type": "combination",
+      "number": 17,
+      "statements": [
+        "Zentralschlüssel",
+        "Gruppenschlüssel",
+        "Buntbartschlüssel"
+      ],
+      "demo": true
+    },
+    {
+      "source": "Prüfung 6.pdf",
+      "source_question_number": 69,
+      "category": "Strafgesetz verletzt und mit Strafe bedroht ist",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "S bleibt sachlich und gelassen und nimmt die Äußerungen von P nicht persönlich",
+        "S macht P klar, wer hier zu bestimmen hat und droht mit der Polizei",
+        "S begibt sich auf die gleiche Gesprächsebene wie P und benutzt ähnliche Schimpfworte",
+        "S zieht sich zurück und wendet sich anderen Aufgaben zu"
+      ],
+      "explanation": "Bei dieser Frage ist genau eine Antwort richtig.",
+      "correct_count_hint": 1,
+      "question": "Die Wachperson S wird von der stark alkoholisierten Person P mit den Worten „Du Idiot! Geh mir aus dem Weg“ beleidigt. Wie sollte sich S verhalten?",
+      "correct": [
+        0
+      ],
+      "type": "single_choice",
+      "number": 18,
+      "demo": true
+    },
+    {
+      "source": "Prüfung 7.pdf",
+      "source_question_number": 50,
+      "category": "Allgemein",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "Das wach- und Sicherungspersonal ist verpflichtet, zum Zweck der Eigensicherung eine Schusswaffe während des Dienstes zu führen",
+        "Das Wach- und Sicherungspersonal muss an der Schusswaffe ausgebildet sein und regelmäßig an Schießübungen teilnehmen",
+        "Das Wach- und Sicherungspersonal muss alle 2 Jahre dem Bewachungsgewerbetreibenden die Waffensachkunde nachweisen",
+        "Das Wach- und Sicherungspersonal darf mit Schusswaffen ausgerüstet werden, wenn es nach dem Waffenrecht zuverlässig, geeignet und sachkundig ist"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": 2,
+      "question": "Was gilt für die dienstliche Ausrüstung mit Schusswaffen gemäß der DGUV Vorschrift 23, Wach- und Sicherungsdienste?",
+      "correct": [
+        1,
+        3
+      ],
+      "type": "multiple_choice",
+      "number": 19,
+      "demo": true
+    },
+    {
+      "source": "Prüfung Nr 8.pdf",
+      "source_question_number": 11,
+      "category": "Gewerberecht",
+      "difficulty": "Sehr schwer",
+      "options": [
+        "A) Namen und Anschrift der Wachperson",
+        "B) Namen und Vornamen der Wachperson",
+        "C) Nummer eines amtlichen Ausweisdokuments",
+        "D) Bewacher-Register-Identiﬁkationsnummern"
+      ],
+      "explanation": "Bei dieser Frage sind mehrere Antworten möglich. Alle richtigen Antworten müssen ausgewählt werden.",
+      "correct_count_hint": null,
+      "question": "Was muss ein Dienstausweis gemäß Bewachungsverordnung (BewachV) beinhalten?",
+      "correct": [
+        1,
+        3
+      ],
+      "type": "multiple_choice",
+      "number": 20,
+      "demo": true
+    }
+  ]
+}

@@ -120,7 +120,7 @@ export default function App() {
         <section className="hero">
           <div className="badge">FREE Demo · 20 Fragen</div>
           <h1>LernLoop §34a</h1>
-          <p>Prüfungssimulator</p>
+          <p>Trainiere mit 472+ Fragen und starte realistische 82-Fragen-Prüfungen.</p>
 
           <div className="heroActions">
             <button className="primary" onClick={startExam}>

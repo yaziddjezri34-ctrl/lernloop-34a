@@ -1,9 +1,10 @@
 import React, { useMemo, useState } from "react";
-import { CheckCircle2, XCircle, RotateCcw, Trophy, Lock, BookOpen, GraduationCap } from "lucide-react";
+import { CheckCircle2, XCircle, RotateCcw, Trophy, Lock, BookOpen, GraduationCap, PlayCircle } from "lucide-react";
 import data from "./questions_demo.json";
 import "./style.css";
 
 const PASS_PERCENT = data.passingPercent || 60;
+const LEARN_LIMIT = 5;
 
 function getType(q) {
   if (q.type) return q.type;
@@ -28,7 +29,7 @@ function arrayEquals(a, b) {
   return aa.length === bb.length && aa.every((v, i) => v === bb[i]);
 }
 
-function OptionButton({ active, checked, children, onClick, disabled }) {
+function OptionButton({ checked, active, children, onClick, disabled }) {
   return (
     <button
       className={`option ${checked ? "selected" : ""} ${active ? "active" : ""}`}
@@ -41,14 +42,15 @@ function OptionButton({ active, checked, children, onClick, disabled }) {
 }
 
 export default function App() {
-  const questions = data.questions || [];
+  const allQuestions = data.questions || [];
   const [mode, setMode] = useState("start");
+  const [runType, setRunType] = useState("exam");
+  const [activeQuestions, setActiveQuestions] = useState(allQuestions);
   const [index, setIndex] = useState(0);
-  const [answers, setAnswers] = useState(Array.from({ length: questions.length }, () => []));
+  const [answers, setAnswers] = useState(Array.from({ length: allQuestions.length }, () => []));
   const [checked, setChecked] = useState(false);
-  const [showResult, setShowResult] = useState(false);
 
-  const current = questions[index] || {};
+  const current = activeQuestions[index] || {};
   const selected = answers[index] || [];
   const correct = current.correct || [];
   const currentCorrect = arrayEquals(selected, correct);
@@ -56,21 +58,32 @@ export default function App() {
   const stats = useMemo(() => {
     let answered = 0;
     let right = 0;
-    questions.forEach((q, i) => {
+    activeQuestions.forEach((q, i) => {
       const ans = answers[i] || [];
       if (ans.length > 0) answered++;
       if (arrayEquals(ans, q.correct || [])) right++;
     });
-    const percent = questions.length ? Math.round((right / questions.length) * 100) : 0;
-    return { answered, right, wrong: questions.length - right, percent, passed: percent >= PASS_PERCENT };
-  }, [answers, questions]);
+    const percent = activeQuestions.length ? Math.round((right / activeQuestions.length) * 100) : 0;
+    return { answered, right, wrong: activeQuestions.length - right, percent, passed: percent >= PASS_PERCENT };
+  }, [answers, activeQuestions]);
 
   function startExam() {
+    setRunType("exam");
+    setActiveQuestions(allQuestions);
     setMode("exam");
     setIndex(0);
-    setAnswers(Array.from({ length: questions.length }, () => []));
+    setAnswers(Array.from({ length: allQuestions.length }, () => []));
     setChecked(false);
-    setShowResult(false);
+  }
+
+  function startLearning() {
+    const learnQuestions = allQuestions.slice(0, LEARN_LIMIT);
+    setRunType("learn");
+    setActiveQuestions(learnQuestions);
+    setMode("exam");
+    setIndex(0);
+    setAnswers(Array.from({ length: learnQuestions.length }, () => []));
+    setChecked(false);
   }
 
   function toggleOption(i) {
@@ -94,11 +107,10 @@ export default function App() {
   }
 
   function next() {
-    if (index < questions.length - 1) {
+    if (index < activeQuestions.length - 1) {
       setIndex(index + 1);
       setChecked(false);
     } else {
-      setShowResult(true);
       setMode("result");
     }
   }
@@ -124,7 +136,10 @@ export default function App() {
 
           <div className="heroActions">
             <button className="primary" onClick={startExam}>
-              Demo starten
+              <PlayCircle size={18} /> Demo starten
+            </button>
+            <button className="ghostButton" onClick={startLearning}>
+              <BookOpen size={18} /> Lernmodus testen
             </button>
             <a className="ghost" href="#vollversion">Vollversion ansehen</a>
           </div>
@@ -139,20 +154,21 @@ export default function App() {
           <div className="infoCard">
             <BookOpen />
             <h3>Lernmodus</h3>
-            <p>Antwort auswählen, prüfen und Erklärung lesen.</p>
+            <p>5 Fragen kostenlos testen: auswählen, prüfen und Erklärung lesen.</p>
           </div>
           <div className="infoCard">
             <Lock />
             <h3>Vollversion</h3>
-            <p>472+ Fragen, Mischprüfungen, Statistik und Fehlerbank.</p>
+            <p>472+ prüfungsnahe Fragen, Mischprüfungen, Fehlerbank und Statistik.</p>
           </div>
         </section>
 
         <section id="vollversion" className="upgrade">
           <h2>Vollversion</h2>
           <p>
-            Die Demo enthält 20 Fragen. Die Vollversion enthält 472+ Fragen, 82-Fragen-Prüfungen,
-            sehr schwere Mischprüfungen, Fehlerbank, Statistik und Lernmodus.
+            Die Demo enthält 20 ausgewählte Fragen. In der Vollversion trainierst du mit
+            472+ prüfungsnahen Fragen, realistischen 82-Fragen-Prüfungen, schweren
+            Mischprüfungen, Lernmodus, Fehlerbank und Statistik.
           </p>
         </section>
       </main>
@@ -160,29 +176,34 @@ export default function App() {
   }
 
   if (mode === "result") {
+    const learnDone = runType === "learn";
     return (
       <main className="page resultPage">
         <section className={`resultBox ${stats.passed ? "passed" : "failed"}`}>
-          {stats.passed ? <Trophy size={56} /> : <XCircle size={56} />}
-          <h1>{stats.passed ? "Bestanden" : "Nicht bestanden"}</h1>
-          <p>{stats.percent}% erreicht · Bestehensgrenze {PASS_PERCENT}%</p>
+          {learnDone ? <BookOpen size={56} /> : stats.passed ? <Trophy size={56} /> : <XCircle size={56} />}
+          <h1>{learnDone ? "Lernmodus beendet" : stats.passed ? "Bestanden" : "Nicht bestanden"}</h1>
+          <p>
+            {learnDone
+              ? `Du hast ${activeQuestions.length} Lernfragen getestet.`
+              : `${stats.percent}% erreicht · Bestehensgrenze ${PASS_PERCENT}%`}
+          </p>
 
           <div className="resultGrid">
-            <div><strong>{questions.length}</strong><span>Fragen</span></div>
+            <div><strong>{activeQuestions.length}</strong><span>Fragen</span></div>
             <div><strong>{stats.answered}</strong><span>Beantwortet</span></div>
             <div><strong>{stats.right}</strong><span>Richtig</span></div>
             <div><strong>{stats.wrong}</strong><span>Falsch/offen</span></div>
           </div>
 
           <div className="heroActions">
-            <button className="primary" onClick={startExam}>
-              <RotateCcw size={18} /> Neu starten
+            <button className="primary" onClick={learnDone ? startLearning : startExam}>
+              <RotateCcw size={18} /> {learnDone ? "Lernmodus neu testen" : "Demo neu starten"}
             </button>
             <button className="ghostButton" onClick={() => setMode("start")}>Zur Startseite</button>
           </div>
 
           <p className="smallUpgrade">
-            Demo abgeschlossen. Die Vollversion enthält 472+ Fragen und schwere Mischprüfungen.
+            Die Vollversion enthält 472+ Fragen, realistische 82-Fragen-Prüfungen, Fehlerbank und Statistik.
           </p>
         </section>
       </main>
@@ -193,17 +214,18 @@ export default function App() {
     <main className="page">
       <header className="examHeader">
         <div>
-          <div className="badge">{typeLabel(current)}</div>
-          <h1>Frage {index + 1} von {questions.length}</h1>
+          <div className="badge">{runType === "learn" ? "Lernmodus · 5 Fragen" : typeLabel(current)}</div>
+          <h1>{runType === "learn" ? "Lernfrage" : "Frage"} {index + 1} von {activeQuestions.length}</h1>
         </div>
-        <div className="score">{stats.right}/{questions.length} richtig</div>
+        <div className="score">{stats.right}/{activeQuestions.length} richtig</div>
       </header>
 
       <div className="progress">
-        <div style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
+        <div style={{ width: `${((index + 1) / activeQuestions.length) * 100}%` }} />
       </div>
 
       <section className="questionCard">
+        <div className="questionMeta">{typeLabel(current)}</div>
         <h2>{current.question}</h2>
 
         {getType(current) === "combination" && current.statements?.length > 0 && (
@@ -255,7 +277,7 @@ export default function App() {
       <footer className="bottomBar">
         <button className="ghostButton" onClick={prev} disabled={index === 0}>Zurück</button>
         <button className="primary" onClick={checkAnswer} disabled={!selected.length || checked}>Prüfen</button>
-        <button className="ghostButton" onClick={next}>{index < questions.length - 1 ? "Weiter" : "Auswertung"}</button>
+        <button className="ghostButton" onClick={next}>{index < activeQuestions.length - 1 ? "Weiter" : "Auswertung"}</button>
       </footer>
     </main>
   );

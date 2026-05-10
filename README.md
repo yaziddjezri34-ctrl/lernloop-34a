@@ -46,3 +46,8 @@ vercel
 ## Fix-Hinweis
 
 Diese Version nutzt `src/main.jsx` als React-Einstiegspunkt.
+
+
+## Lernmodus Demo
+
+Die Startseite enthält einen Button **Lernmodus testen** mit genau 5 Demo-Fragen.
